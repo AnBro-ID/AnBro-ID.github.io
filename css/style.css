@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('null.css');
+
+.win95 {
+	background: #F0F0F0;
+	box-shadow: inset -1px -1px 0px #000000, inset 1px 1px 0px #FFFFFF, inset -2px -2px 0px #A0A0A0, inset 2px 2px 0px #FFFFFF;
+}
+
+.app-card-title:hover {
+	background: #dadada;
+}
+
+.content {
+	flex: 1 1 auto;
+}
+
+.header-wrapper {
+	display: flex;
+	padding: 0.1em;
+	justify-content: space-between;
+	align-items: center;
+	background: linear-gradient(270deg, #1085D2 0%, #00007B 100%);
+}
+
+.header-exit, .email {
+	display: flex;
+	align-items: center;
+	padding: 0.5em;
+	align-self: stretch;
+}
+
+.header-exit:active, .email:active {
+	box-shadow: inset 1px 1px 0px #000000, inset -1px -1px 0px #FFFFFF, inset 2px 2px 0px #A0A0A0, inset -2px -2px 0px #FFFFFF;
+}
+
+.header-cross {
+	width: 15px;
+	height: 15px;
+}
+
+.app-card {
+	margin-bottom: 0.7em;
+	width: 100%;
+}
+
+.app-card:last-child {
+	margin: 0;
+}
+
+.app-title {
+	margin: 0 0.5em;
+	font-size: inherit;
+	font-weight: normal;
+}
+
+.app-card-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.app-card-icon {
+	display: flex;
+	align-items: center;
+}
+
+.app-card-desc {
+	font-family: monospace;
+	font-size: 17px;
+	padding: 0.5em;
+}
+
+a {
+	color: #000000
+}
+body {
+	font-family: 'Press Start 2P';
+	min-height: 100vh;
+	max-width: 768px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	background: url(../img/back.jpg);
+}
+
+section {
+	padding: 0.7em;
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+section p {
+    margin: 0px 0px 10px 0px;
+}
+
+section p a {
+    text-decoration: underline;
+}
+
+section h3 {
+    margin: 0px 0px 10px 0px;
+}
+
+section p:last-child {
+    margin: 0px;
+}
+
+footer {
+	padding: 0.5em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header {
+	padding: 0.2em;
+}
+
+header h1 {
+	padding: 0.5em;
+	color: #FFFFFF;
+	font-size: inherit;
+	font-weight: normal;
+}
+
+body:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background: url(../img/back2.jpg);
+	animation: back_anim 10s ease-in-out infinite;
+}
+
+@keyframes back_anim {
+ 0% { opacity: 0; }
+ 50% { opacity: 1; }
+ 100% { opacity: 0; }
+}
+
+@media (max-width:767px) {
+	body {
+		max-width: none;
+		font-size: 12px;
+	}
+	body:after {
+		content: none;
+	}
+	
+	.app-card-desc {
+		font-size: 15px;
+	}
+}
